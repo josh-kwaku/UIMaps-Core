@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 
 app.use(morgan('combined'));
 
-// app.use(cors({
-//     origin: process.env.NODE_ENV === 'development' ? process.env.FRONTEND_LOCAL_URL : process.env.FRONTEND_PRODUCTION_URL
-// }));
+app.use(cors({
+    origin: 'https://uimaps-backend.herokuapp.com/'
+}));
 
 app.get('/', (req, res) => {
     res.status(200).send("Graph Algo");
